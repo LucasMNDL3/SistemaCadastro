@@ -12,3 +12,12 @@ Permite trabalho simultâneo sem sobrescrita, mantém histórico completo, viabi
 
 5. O que representa a versão 1.1.0?
 Pelo versionamento semântico, o incremento do MINOR (de 1.0.0 para 1.1.0) indica uma nova funcionalidade compatível com a versão anterior — a opção de exclusão de usuário. Não houve quebra de compatibilidade, o que exigiria MAJOR.
+
+6. A tag foi criada direto na interface do GitHub, essa tag também pode ser realizada pela interface CLI, escreva abaixo os comandos git para criação desta tag.
+
+```bash
+git tag -a v1.1.0 -m "Versão com funcionalidade de exclusão de usuário"
+git push origin v1.1.0
+```
+
+O parâmetro `-a` cria uma tag anotada, que armazena autor, data e mensagem, diferente da tag leve, que é apenas um ponteiro para o commit. O `git push origin v1.1.0` envia a tag para o repositório remoto, já que tags não sobem automaticamente com o push comum.
